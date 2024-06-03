@@ -1,0 +1,200 @@
+body{
+    background-color: #f2f1e7;
+    font-family: "Red Hat Mono", monospace;
+    padding: 0;
+}
+
+img{
+    display: block;
+    min-width: 200px;
+    max-height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#logo{
+    width: 10%;
+    border-radius: 80%;
+}
+
+section{
+    display: block;
+    margin: 50px;
+    width: 33%;
+}
+
+#menu{
+    margin: 50px;
+    width: fit-content;
+    font-size: 24px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li{
+    float: left;
+    border-right: 1px solid #777777;
+}
+
+li:last-child{
+    border-right: none;
+}
+
+li a{
+    display: block;
+    color: rgb(64, 108, 59);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+li a:hover{
+    color: rgb(64, 108, 59);
+}
+
+li a::before{
+    content: "";
+    position: absolute;
+    display: block;
+    margin-left: 10px;
+    width: 80%;
+    height: 2px;
+    bottom: 16px;
+    left: 0;
+    background-color: rgb(64, 108, 59);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+li a:hover::before{
+    transform: scaleX(1);
+}
+
+#info{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#photos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+footer{
+    display: block;
+    text-align: center;
+    background-color: rgba(64, 108, 59, 0.6);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+    margin: 0;
+}
+
+#top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    position: relative;
+    cursor: pointer;
+    color: #859f7e;
+    outline: none;
+}
+
+
+
+@media (max-width: 768px){
+
+    body{
+        background-color: #f2f1e7;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    ul.wrapper {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    ul.wrapper.show {
+        display: flex;
+    }
+
+    li{
+        float: none;
+        border-bottom: 1px solid #777777;
+        border-right: none;
+    }
+
+    li a{
+        display: flex;
+        flex-direction: row;
+        pointer-events: none;
+    }
+
+    #top{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu{
+        width: 90%;
+        margin: 0.5%;
+        align-self: center;
+    }
+
+    #info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    #logo{
+        height: 100%;
+        align-self: center;
+    }
+
+    section{
+        width: 80%;
+        margin-right: 0;
+    }
+
+    #photosection {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+
+    #photos {
+
+        width: 40%;
+        height: 100%;
+
+    }
+
+    footer{
+        display: block;
+        padding: 2% 0 2% 0;
+    }
+
+}

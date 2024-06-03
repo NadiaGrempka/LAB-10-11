@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lightbox</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<p id="header">&#127872 Cat Gallery &#127872</p>
+<div class="row">
+    <div class="column">
+        <img src="https://i.pinimg.com/564x/4b/0f/d6/4b0fd6c5573090f6a8c0a245f6474f51.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="cat n strawberries">
+    </div>
+    <div class="column">
+        <img src="https://i.pinimg.com/736x/f2/96/65/f296653eeba7b690d511b8163db943d8.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="fairy cat">
+    </div>
+    <div class="column">
+        <img src="https://i.pinimg.com/564x/d0/01/4d/d0014d1cf97940373de815f26bd4962f.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="birthday cat">
+    </div>
+    <div class="column">
+        <img src="https://i.pinimg.com/564x/2a/cf/7b/2acf7bb245a3be1c07fb04fe1e274d3c.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="cat through a looking glass">
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="https://i.pinimg.com/564x/4b/0f/d6/4b0fd6c5573090f6a8c0a245f6474f51.jpg">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="https://i.pinimg.com/736x/f2/96/65/f296653eeba7b690d511b8163db943d8.jpg">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="https://i.pinimg.com/564x/d0/01/4d/d0014d1cf97940373de815f26bd4962f.jpg">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="https://i.pinimg.com/564x/2a/cf/7b/2acf7bb245a3be1c07fb04fe1e274d3c.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="column2">
+            <img class="demo" src="https://i.pinimg.com/564x/4b/0f/d6/4b0fd6c5573090f6a8c0a245f6474f51.jpg" onclick="currentSlide(1)" alt="Cat 'n' strawberries">
+        </div>
+
+        <div class="column2">
+            <img class="demo" src="https://i.pinimg.com/736x/f2/96/65/f296653eeba7b690d511b8163db943d8.jpg" onclick="currentSlide(2)" alt="Fairy cat">
+        </div>
+
+        <div class="column2">
+            <img class="demo" src="https://i.pinimg.com/564x/d0/01/4d/d0014d1cf97940373de815f26bd4962f.jpg" onclick="currentSlide(3)" alt="B-day kitty">
+        </div>
+
+        <div class="column2">
+            <img class="demo" src="https://i.pinimg.com/564x/2a/cf/7b/2acf7bb245a3be1c07fb04fe1e274d3c.jpg" onclick="currentSlide(4)" alt="Cat through a looking glass">
+        </div>
+    </div>
+</div>
+</body>
+</html>
